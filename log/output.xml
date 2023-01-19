@@ -1,55 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230119 11:17:04.094" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo11 Advance" source="C:\Users\40032117\robot_project\selenium_suite\demo11_advance.robot">
-<test id="s1-t1" name="TC5" line="40">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230119 11:17:04.478" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230119 11:17:04.478" endtime="20230119 11:17:06.389"/>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230119 14:22:17.124" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo3" source="C:\Users\40032117\robot_project\robot_suite\demo3.robot">
+<test id="s1-t1" name="TC9" line="53">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{emp_dic}</var>
+<arg>emp_id=101</arg>
+<arg>emp_name=jack</arg>
+<arg>role=qa</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230119 14:22:17.171" level="INFO">&amp;{emp_dic} = { emp_id=101 | emp_name=jack | role=qa }</msg>
+<status status="PASS" starttime="20230119 14:22:17.171" endtime="20230119 14:22:17.187"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230119 11:17:06.390" endtime="20230119 11:17:06.525"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${emp_dic}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230119 14:22:17.187" endtime="20230119 14:22:17.187"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230119 11:17:06.525" endtime="20230119 11:17:06.528"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://nasscom.in</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230119 11:17:06.529" level="INFO">Opening url 'https://nasscom.in'</msg>
-<status status="PASS" starttime="20230119 11:17:06.528" endtime="20230119 11:17:28.610"/>
-</kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${ele}</var>
-<arg>link=Become a Member</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20230119 11:17:59.572" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-73.png"&gt;&lt;img src="selenium-screenshot-73.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230119 11:17:59.572" level="FAIL">Element with locator 'link=Become a Member' not found.</msg>
-<status status="FAIL" starttime="20230119 11:17:28.610" endtime="20230119 11:17:59.584"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click()</arg>
-<arg>ARGUMENTS</arg>
-<arg>${ele}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20230119 11:17:59.584" endtime="20230119 11:17:59.584"/>
-</kw>
-<status status="FAIL" starttime="20230119 11:17:04.478" endtime="20230119 11:17:59.584">Element with locator 'link=Become a Member' not found.</status>
+<status status="PASS" starttime="20230119 14:22:17.171" endtime="20230119 14:22:17.187"/>
 </test>
-<status status="FAIL" starttime="20230119 11:17:04.110" endtime="20230119 11:17:59.584"/>
+<status status="PASS" starttime="20230119 14:22:17.138" endtime="20230119 14:22:17.187"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Demo11 Advance">Demo11 Advance</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo3">Demo3</stat>
 </suite>
 </statistics>
 <errors>
