@@ -16,3 +16,31 @@ TC2 CSS Selector
     Input Text    css=#email    jack
     Input Password    css=#pass    pass123
     Click Element    css=button[name='login']
+
+TC3 Javascript
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    5s
+    Go To    url=https://phptravels.net/
+    Execute Javascript   document.querySelector('#checkin').value='31-10-2023'
+    Execute Javascript   document.querySelector('#checkout').value='29-11-2023'
+    Click Element    id=select2-hotels_city-container
+    Input Text    xpath=//input[@class='select2-search__field']    Vadodara
+    Click Element    xpath=//li[@data-select2-id='62']
+
+TC4
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    5s
+    Go To    url=https://www.redbus.in
+    Click Element    id=src
+    Input Text    xpath=//input[@class='db']    Vadodara
+    Click Element    xpath=//li[@data-no='2']
+
+TC5
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    30s
+    Go To    url=https://nasscom.in
+    ${ele}     Get WebElement    link=Become a Member
+    Execute Javascript      arguments[0].click()    ARGUMENTS   ${ele}
