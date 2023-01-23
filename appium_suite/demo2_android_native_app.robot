@@ -15,7 +15,7 @@ TC1 Sign Up
     ...      platformVersion=9.0
     ...    bstack:options=${dic}
 
-    Wait Until Page Contains Element    xpath=//*[@text='Dismiss']
+    Wait Until Page Contains Element    xpath=//*[@text='Dismiss']      30s
     Click Element    xpath=//*[@text='Dismiss']
     Wait Until Page Contains Element    xpath=//android.widget.ImageView[@content-desc="Settings"]      30s
     Click Element    xpath=//android.widget.ImageView[@content-desc="Settings"]
