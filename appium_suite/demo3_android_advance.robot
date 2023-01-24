@@ -68,3 +68,19 @@ TC2
     ...     app=bs://b94aaa76e69d372a5945d7106f25b4a3717520d7
     ...      platformVersion=9.0
     ...    bstack:options=${dic}
+
+     Wait Until Page Contains Element    xpath=//*[@text='Dismiss']
+     Click Element    xpath=//*[@text='Dismiss']
+     Wait Until Page Contains Element    xpath=//android.widget.Button[@text='Search']
+     Click Element   xpath=//android.widget.Button[@text='Search']
+     Wait Until Page Contains Element    xpath=//android.widget.TextView[@text='Arts and humanities']
+     Click Element   xpath=//android.widget.TextView[@text='Arts and humanities']    &{dic_arg}
+     Create Dictionary       strategy=android uiautomator
+     ...     selector=UiSelector().text("Art of Asia")
+     Execute Script    mobile:scroll    &{dic_arg}
+     Click Element    android=UiSelector().text("Art of Asia")     &{dic_arg}
+     Create Dictionary       strategy=android uiautomator
+     ...     selector=UiSelector().text("South Asia")
+     Execute Script    mobile:scroll    &{dic_arg}
+     Click Element    android=UiSelector().text("South Asia")
+     [Teardown]      Close Application

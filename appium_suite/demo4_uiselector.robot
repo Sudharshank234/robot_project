@@ -4,15 +4,14 @@ Library     AppiumLibrary
 TC1
      &{dic}      Create Dictionary       buildName=khan lt7
     ...     projectName=khanmproject lt7
-    ...     userName=sudharshank_QgXcKx
-    ...     accessKey=7DCKJuFpFVocWUJTzHQ2
+    ...     userName=sudharshank_P83zyX
+    ...     accessKey=xTQQyyp8WZnDsMt7g2jB
 
-    [Documentation]     #working with native app
+    #working with native app
     Open Application    remote_url=http://hub.browserstack.com/wd/hub
     ...     platformName=android
     ...     deviceName=Google Pixel 3
-    ...     app=bs://69fb0e65d332ba6120ed6f33c10b3cce89f6170b
-    ...     noReset=true
+    ...     app=bs://6e446eb1624fa5dcaee4922182c0a9b834dbe966
     ...      platformVersion=9.0
     ...    bstack:options=${dic}
     Set Appium Timeout    30s
@@ -26,6 +25,7 @@ TC1
     Click Element    android=UiSelector().textContains("Sign up with email")
     
     Wait Until Page Contains Element    android=UiSelector().textContains("First name")
+    Input Text    android=UiSelector().textContains("First name")    Sudharshan
     Wait Until Page Contains Element    android=UiSelector().textContains("Last name")
     Input Text     android=UiSelector().textContains("Last name")    K
     Wait Until Page Contains Element    xpath=UiSelector().textContains("Birthday")
