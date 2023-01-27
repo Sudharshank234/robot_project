@@ -1,0 +1,5 @@
+1674560296735	geckodriver	INFO	Listening on 127.0.0.1:63611
+1674560299796	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63612" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\40032117\\AppData\\Local\\Temp\\rust_mozprofileiTW3zd"
+1674560300368	Marionette	INFO	Marionette enabled
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))

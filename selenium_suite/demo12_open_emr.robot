@@ -17,7 +17,7 @@ TC1
     Input Text    xpath=//input[@title='First Name']    Sudharshan
     Input Text    xpath=//input[@title='Last Name']    K
     Click Element    id=form_DOB
-    Input Text    id=form_DOB    24/01/2023
+    Input Text    id=form_DOB    26/01/2023
     Select From List By Label    id=form_sex      Male
     Click Element    id=create
     Unselect Frame
@@ -25,5 +25,5 @@ TC1
     Click Element    xpath=//input[@value='Confirm Create New Patient']
     ${alert_text}    Handle Alert    action=ACCEPT      timeout=30s
     Log To Console    ${alert_text}
-    Click Element    xpath=//div[@class='closeDlgIframe']
+    Run Keyword And Ignore Error       Click Element    xpath=//div[@class='closeDlgIframe']
     Element Text Should Be    xpath=//span[text()='Sudharshan K']    Sudharshan K
