@@ -16,7 +16,7 @@ TC1 Register
     Select From List By Label    xpath=//select[@title='Day']      23
     Select From List By Label    id=month   Apr
     Select From List By Label    xpath=//select[@title='Month']     Apr
-    #Select From List By Label    id=year   2001
+    Select From List By Label    id=year   2001
     Click Element    xpath=//input[@value='-1']
     Select From List By Label    name=preferred_pronoun     They: "Wish them a happy birthday!"
     Click Element    name=websubmit
